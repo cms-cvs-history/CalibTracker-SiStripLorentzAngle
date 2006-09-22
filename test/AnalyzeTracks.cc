@@ -55,28 +55,31 @@ void AnalyzeTracks::analyze(const edm::Event& e, const edm::EventSetup& es)
 	for(iter=hitangle.begin();iter!=hitangle.end();iter++){
 	  LocalPoint position= (iter->first)->localPosition();
 	  float angle=iter->second;
-	  std::cout<<"Local Position= "<<position<<std::endl;
-	  std::cout<<"Local Angle= "<<angle<<std::endl;
+	  edm::LogInfo("AnalyzeTracks")<<"Local Position= "<<position;
+	  edm::LogInfo("AnalyzeTracks")<<"Local Angle= "<<angle;
 	}
       }
     }
     else edm::LogInfo("AnalyzeTracks")<<"No track found in the event";
   }
   else{
+    edm::LogInfo("AnalyzeTracks")<<"Analyze MTCC track ";
+
     edm::Handle<TrajectorySeedCollection> seedcoll;
     e.getByType(seedcoll);
-    LogDebug("SiStripLorentzAngle::analyze")<<"Getting used rechit";
+    LogDebug("AnalyzeTracks::analyze")<<"Getting used rechit";
     edm::Handle<reco::TrackCollection> trackCollection;
     e.getByType(trackCollection);
     const reco::TrackCollection *tracks=trackCollection.product();
     
     std::vector<std::pair<const TrackingRecHit *,float> >hitangle =anglefinder_->findtrackangle((*(*seedcoll).begin()),tracks->front());
-    std::vector<std::pair<const TrackingRecHit * ,float> >::iterator iter;
+    edm::LogInfo("AnalyzeTracks")<<"Number of hits= "<<hitangle.size();
+    vector<std::pair<const TrackingRecHit * ,float> >::iterator iter;
     for(iter=hitangle.begin();iter!=hitangle.end();iter++){
-      LocalPoint position= (iter->first)->localPosition();
       float angle=iter->second;
-      std::cout<<"Local Position= "<<position<<std::endl;
-      std::cout<<"Local Angle= "<<angle<<std::endl;
+      edm::LogInfo("AnalyzeTracks")<<"Local Angle= "<<angle;
+      LocalPoint position= (iter->first)->localPosition();
+      edm::LogInfo("AnalyzeTracks")<<"Local Position= "<<position;
     }
   }
 }
