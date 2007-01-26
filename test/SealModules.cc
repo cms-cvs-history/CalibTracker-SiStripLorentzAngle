@@ -2,5 +2,5 @@
 #include "FWCore/Framework/interface/MakerMacros.h"
 #include "CalibTracker/SiStripLorentzAngle/test/AnalyzeTracks.h"
 DEFINE_SEAL_MODULE();
-DEFINE_ANOTHER_FWK_MODULE(AnalyzeTracks)
+DEFINE_ANOTHER_FWK_MODULE(AnalyzeTracks);
 
