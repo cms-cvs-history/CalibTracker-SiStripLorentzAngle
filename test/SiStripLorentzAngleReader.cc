@@ -11,7 +11,7 @@
 using namespace cms;
 
 SiStripLorentzAngleReader::SiStripLorentzAngleReader( const edm::ParameterSet& iConfig ):
-  printdebug_(iConfig.getUntrackedParameter<bool>("printDebug",false)){};
+  printdebug_(iConfig.getUntrackedParameter<bool>("printDebug",false)){}
 
 SiStripLorentzAngleReader::~SiStripLorentzAngleReader(){}
 
