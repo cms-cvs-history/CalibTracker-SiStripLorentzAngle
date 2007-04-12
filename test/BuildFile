@@ -4,6 +4,6 @@
 <use name=CalibTracker/SiStripLorentzAngle>
 <use name=clhep>
 <use name=boost>
-<flags SEAL_PLUGIN_NAME="SiStripLorentzAngleTest">
+<flags EDM_PLUGIN=1>
 <library file=*.cc name=SiStripLorentzAngleTest>
 </library>
