@@ -1,5 +1,7 @@
 
 module sistripLorentzAngle = SiStripLorentzAngleDB{
+        string fileName = "trackhisto.root"
+	InputTag Tracks= ctfWithMaterialTracks
         double AppliedVoltage = 150.
         double ChargeMobility = 480.
         double Temperature = 297.
@@ -7,4 +9,13 @@ module sistripLorentzAngle = SiStripLorentzAngleDB{
         double HoleSaturationVelocity = 8.37e6
         double HoleBeta = 1.213
         double HoleRHAllParameter = 0.7
+        int32 TIBbinning = 30
+        int32 TOBbinning = 30
+        double ModuleRangeMin = -0.3
+        double ModuleRangeMax = 0.3
+        double TIBRangeMin = -0.3
+        double TIBRangeMax = 0.3
+        double TOBRangeMin = -0.3
+        double TOBRangeMax = 0.3
+        string fitName = "fit_results"
 }
