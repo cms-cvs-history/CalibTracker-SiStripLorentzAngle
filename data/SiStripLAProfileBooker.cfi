@@ -1,0 +1,34 @@
+
+module sistripLorentzAngle = SiStripLAProfileBooker{
+# input from trajectories
+	InputTag Tracks= ctfWithMaterialTracks
+
+# th. calculation
+        double AppliedVoltage = 150.
+        double ChargeMobility = 480.
+        double Temperature = 297.
+	double TemperatureError =10.
+        double HoleSaturationVelocity = 8.37e6
+        double HoleBeta = 1.213
+        double HoleRHAllParameter = 0.7
+
+# calibration
+	bool DoCalibration=false
+        double ModuleXMin = -0.6
+        double ModuleXMax = 0.6
+        double TIBXMin = -0.6
+        double TIBXMax = 0.6
+        double TOBXMin = -0.6
+        double TOBXMax = 0.6
+        double ModuleFitXMin = -0.3
+        double ModuleFitXMax = 0.3
+        double TIBFitXMin = -0.3
+        double TIBFitXMax = 0.3
+        double TOBFitXMin = -0.3
+        double TOBFitXMax = 0.3
+
+#output files
+        string fitName = "fit_results"
+        untracked string fileName = "trackhisto.root"
+
+}

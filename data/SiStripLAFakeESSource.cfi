@@ -1,0 +1,11 @@
+es_source = SiStripLAFakeESSource { 
+
+	FileInPath file = "CalibTracker/SiStripCommon/data/SiStripDetInfo.dat"
+        double AppliedVoltage = 150.
+        double ChargeMobility = 480.
+        double Temperature = 297.
+	double TemperatureError =10.
+        double HoleSaturationVelocity = 8.37e6
+        double HoleBeta = 1.213
+        double HoleRHAllParameter = 0.7	
+}
