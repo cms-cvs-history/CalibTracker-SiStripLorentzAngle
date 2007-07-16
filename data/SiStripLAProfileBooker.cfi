@@ -2,6 +2,7 @@
 module sistripLorentzAngle = SiStripLAProfileBooker{
 # input from trajectories
 	InputTag Tracks= ctfWithMaterialTracks
+        bool UseStripCablingDB=false
 
 # th. calculation
         double AppliedVoltage = 150.
