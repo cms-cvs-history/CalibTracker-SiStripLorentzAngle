@@ -4,15 +4,6 @@ module sistripLorentzAngle = SiStripLAProfileBooker{
 	InputTag Tracks= ctfWithMaterialTracks
         bool UseStripCablingDB=false
 
-# th. calculation
-        double AppliedVoltage = 150.
-        double ChargeMobility = 480.
-        double Temperature = 297.
-	double TemperatureError =10.
-        double HoleSaturationVelocity = 8.37e6
-        double HoleBeta = 1.213
-        double HoleRHAllParameter = 0.7
-
 # calibration
 	bool DoCalibration=false
         double ModuleXMin = -0.6
@@ -27,6 +18,8 @@ module sistripLorentzAngle = SiStripLAProfileBooker{
         double TIBFitXMax = 0.3
         double TOBFitXMin = -0.3
         double TOBFitXMax = 0.3
+
+	int NHitMin=8
 
 #output files
         string fitName = "fit_results"
