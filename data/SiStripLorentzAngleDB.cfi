@@ -1,7 +1,7 @@
 
 module sistripLorentzAngle = SiStripLorentzAngleDB{
 # input from trajectories
-	InputTag Tracks= ctfWithMaterialTracks
+	InputTag Tracks= generalTracks
 
 # th. calculation
         double AppliedVoltage = 150.

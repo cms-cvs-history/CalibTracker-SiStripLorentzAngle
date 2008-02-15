@@ -1,7 +1,7 @@
 
 module sistripLorentzAngle = SiStripLAProfileBooker{
 # input from trajectories
-	InputTag Tracks= ctfWithMaterialTracks
+	InputTag Tracks= generalTracks
         bool UseStripCablingDB=false
 
 # calibration
