@@ -19,10 +19,11 @@ module sistripLorentzAngle = SiStripLAProfileBooker{
         double TOBFitXMin = -0.3
         double TOBFitXMax = 0.3
 
-	int NHitMin=8
+	int32 NHitMin = 8
 
 #output files
         string fitName = "fit_results"
         untracked string fileName = "trackhisto.root"
+	untracked string treeName = "SiStripLATrees.root"
 
 }
