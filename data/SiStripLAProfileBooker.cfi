@@ -1,11 +1,14 @@
 
-module sistripLorentzAngle = SiStripLAProfileBooker{
+module sistripLAProfile = SiStripLAProfileBooker{
 # input from trajectories
 	InputTag Tracks= generalTracks
         bool UseStripCablingDB=false
 
 # calibration
 	bool DoCalibration=false
+	int32 TIB_bin = 30
+	int32 TOB_bin = 30
+	int32 SUM_bin = 30
         double ModuleXMin = -0.6
         double ModuleXMax = 0.6
         double TIBXMin = -0.6
@@ -18,8 +21,8 @@ module sistripLorentzAngle = SiStripLAProfileBooker{
         double TIBFitXMax = 0.3
         double TOBFitXMin = -0.3
         double TOBFitXMax = 0.3
-
-	int32 NHitMin = 8
+	bool   Fit_Result = false
+	#int32 NHitMin = 8
 
 #output files
         string fitName = "fit_results"

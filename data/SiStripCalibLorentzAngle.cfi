@@ -1,4 +1,4 @@
-module sistripLorentzAngle = SiStripCalibLorentzAngle{        
+module sistripLACalib = SiStripCalibLorentzAngle{        
 	
 	double ModuleFitXMin = -0.3
         double ModuleFitXMax = 0.3
@@ -6,6 +6,14 @@ module sistripLorentzAngle = SiStripCalibLorentzAngle{
         double TIBFitXMax = 0.3
         double TOBFitXMin = -0.3
         double TOBFitXMax = 0.3
+	
+	double ModuleFit2ITXMin = -0.4
+        double ModuleFit2ITXMax = 0.1
+	double FitCuts_Entries = 1000
+	double FitCuts_p0 = 0
+	double FitCuts_p1 = 0.1
+	double FitCuts_p2 = 1
+	double FitCuts_chi2 = 30
 
 	untracked string fileName = "LorentzAngle.root"
         #parameters of the base class (ConditionDBWriter)
