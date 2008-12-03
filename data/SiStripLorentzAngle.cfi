@@ -1,6 +1,0 @@
-
-  module read = SiStripLorentzAngle{
-	bool MTCCtrack = true
-	string TTRHBuilder="WithTrackAngle"
-	string fileName = "trackhisto.root"
-	}
